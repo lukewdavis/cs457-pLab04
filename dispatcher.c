@@ -136,7 +136,7 @@ int main( int argc , char *argv[] )
                 printf("\nDispatcher is now waiting for KDC to terminate\n") ;
                 waitpid( kdcPID , &exitStatus , 0 ) ;
 			
-                printf("\nThe Dispatcher has terminated\n\n") ;
+                printf("\nThe Dispatcher process has terminated\n\n") ;
             }
      
         }
