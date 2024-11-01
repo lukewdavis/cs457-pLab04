@@ -30,11 +30,11 @@ int main( int argc , char *argv[] )
     Pipe( AtoK) ;  // create pipe for Amal-to-KDC
     Pipe( KtoA ) ;  // create pipe for KDC-to-Amal
 
-    printf("\tDispatcher started and created these pipes\n") ;
-    printf("\t1) Amal-to-KDC   protocol pipe: read=%d  write=%d\n", AtoK[ READ_END ] , AtoK[ WRITE_END ] ) ;
-    printf("\t2) KDC-to-Amal   protocol pipe: read=%d  write=%d\n", KtoA[ READ_END ] , KtoA[ WRITE_END ] ) ;
-    printf("\t3) Amal-to-Basim protocol pipe: read=%d  write=%d\n", AtoB[ READ_END ] , AtoB[ WRITE_END ] ) ;
-    printf("\t4) Basim-to-Amal protocol pipe: read=%d  write=%d\n", BtoA[ READ_END ] , BtoA[ WRITE_END ] ) ;
+    printf("Dispatcher started and created these pipes\n") ;
+    printf("1) Amal-to-KDC   protocol pipe: read=%d  write=%d\n", AtoK[ READ_END ] , AtoK[ WRITE_END ] ) ;
+    printf("2) KDC-to-Amal   protocol pipe: read=%d  write=%d\n", KtoA[ READ_END ] , KtoA[ WRITE_END ] ) ;
+    printf("3) Amal-to-Basim protocol pipe: read=%d  write=%d\n", AtoB[ READ_END ] , AtoB[ WRITE_END ] ) ;
+    printf("4) Basim-to-Amal protocol pipe: read=%d  write=%d\n", BtoA[ READ_END ] , BtoA[ WRITE_END ] ) ;
 
 
     // Create all three child processes:
@@ -136,7 +136,7 @@ int main( int argc , char *argv[] )
                 printf("\nDispatcher is now waiting for KDC to terminate\n") ;
                 waitpid( kdcPID , &exitStatus , 0 ) ;
 			
-                printf("\nThe Dispatcher has terminated\n") ;
+                printf("\nThe Dispatcher has terminated\n\n") ;
             }
      
         }
