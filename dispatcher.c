@@ -127,6 +127,7 @@ int main( int argc , char *argv[] )
                 close( BtoA[ READ_END ] ) ;   
 
                 printf("\nDispatcher is now waiting for Amal to terminate\n") ;
+                int exitStatus;
                 waitpid( amalPID , &exitStatus , 0 ) ;
 
                 printf("\nDispatcher is now waiting for Basim to terminate\n") ;
