@@ -30,7 +30,7 @@ int main( int argc , char *argv[] )
     Pipe( AtoK) ;  // create pipe for Amal-to-KDC
     Pipe( KtoA ) ;  // create pipe for KDC-to-Amal
 
-    printf("Dispatcher started and created these pipes\n") ;
+    printf("\nDispatcher started and created these pipes\n") ;
     printf("1) Amal-to-KDC   protocol pipe: read=%d  write=%d\n", AtoK[ READ_END ] , AtoK[ WRITE_END ] ) ;
     printf("2) KDC-to-Amal   protocol pipe: read=%d  write=%d\n", KtoA[ READ_END ] , KtoA[ WRITE_END ] ) ;
     printf("3) Amal-to-Basim protocol pipe: read=%d  write=%d\n", AtoB[ READ_END ] , AtoB[ WRITE_END ] ) ;
