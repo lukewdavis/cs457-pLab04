@@ -126,23 +126,20 @@ int main( int argc , char *argv[] )
                 close( BtoA[ WRITE_END] ) ;
                 close( BtoA[ READ_END ] ) ;   
 
-                printf("\n\tDispatcher is now waiting for Amal to terminate\n") ;
+                printf("\nDispatcher is now waiting for Amal to terminate\n") ;
 			    int  exitStatus ;
                 waitpid( amalPID , &exitStatus , 0 ) ;
-                printf("\n\tAmal terminated ... " ) ;
 			    if (  WIFEXITED( exitStatus ) )
                     printf(" with status =%d\n" , WEXITSTATUS(exitStatus ) ) ;
 
-                printf("\n\tDispatcher is now waiting for Basim to terminate\n") ;
+                printf("\nDispatcher is now waiting for Basim to terminate\n") ;
                 waitpid( basimPID , &exitStatus , 0 ) ;
-                printf("\n\tBasim terminated ... " ) ;
 			    if (  WIFEXITED( exitStatus ) )
                     printf(" with status =%d\n" , WEXITSTATUS(exitStatus ) ) ;
 
 
-                printf("\n\tDispatcher is now waiting for KDC to terminate\n") ;
+                printf("\nDispatcher is now waiting for KDC to terminate\n") ;
                 waitpid( kdcPID , &exitStatus , 0 ) ;
-                printf("\n\tKDC terminated ... " ) ;
 			    if (  WIFEXITED( exitStatus ) )
                     printf(" with status =%d\n" , WEXITSTATUS(exitStatus ) ) ;
             }
